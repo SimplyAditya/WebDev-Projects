@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Papyrus</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://kit.fontawesome.com/aa9a150395.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<section id="shipping">
+		<div>FREE shipping above Rs. 699.00<span><i class="fa-solid fa-truck-fast"></i></span></div>
+	</section>
+	<section id="search-header">
+		<!-- <div id="search-bar">
+			<form>
+				<input type="search" name="Search">
+				<button><i class="fas fa-search"></i></button>
+			</form>
+		</div> -->
+		<div id="top-page">
+			<navbar class="navbar_box">
+				<navtop class="navtop">
+					<navtextbox>
+						<p class="navtop_text">Papyrus</p>
+					</navtextbox>
+					<navicons class="navicons authenticated">
+						<a id="search-btn-icon"><i class="fas fa-search"></i></a>
+
+						<a href="/login">
+							<i class="fas fa-user"></i>
+						</a>
+
+						<a href="cartpage.html">
+							<i class="fas fa-shopping-cart"></i>
+						</a>
+					</navicons>
+					<navicons class="navicons unauthenticated">
+						<a href="/login" class="primary-btn">Login</a>
+						<a href="/signup" class="secondary-btn">Signup</a>
+					</navicons>
+				</navtop>
+				<nav id="navbar" class="navbar">
+					<ul>
+						<div class="box_navbar">
+							<div class="box_navbar_text">
+								<p class="hover-text-nav"><a href="account.html"> 🏠 Home
+									</a></p>
+							</div>
+						</div>
+						<div class="box_navbar">
+							<div class="box_navbar_text">
+
+								<div class="dropdown">
+									<span>
+										<p class="hover-text-nav">🛍 shop </p>
+									</span>
+									<div class="dropdown-content">
+										<p><a href="books.html">Books</a></p>
+										<p><a href="poster.html">Posters</a></p>
+										<p><a href="books.html">Magzines</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="box_navbar">
+							<div class="box_navbar_text">
+								<p class="hover-text-nav"><a href="#hot-collections"> ✨
+										Hot Collections </a></p>
+							</div>
+						</div>
+						<div class="box_navbar">
+							<div class="box_navbar_text">
+								<p class="hover-text-nav"><a href="about us.html">📩
+										Contact Us</a></p>
+							</div>
+						</div>
+					</ul>
+
+					<div class="topnav-right"></div>
+				</nav>
+			</navbar>
+		</div>
+	</section>
+
+	<hr class="hr_navbar" />
+
+	<div class="hero_section">
+		<div class="hero_section_text">
+			<h1>We take you on a Journey of limitless <br>learning and fun.</h1>
+		</div>
+	</div>
+
+	<main>
+		<section id="explore-books">
+			<div class="main-book-image"></div>
+			<div class="explore-book-tab">
+				<span>Books for All</span>
+				<ul>
+					<li><i class="fa-sharp fa-solid fa-scroll icon"></i>Great paper quality</li>
+					<li><i class="fa-solid fa-list-check icon"></i>Variety of genres</li>
+					<li><i class="fa-solid fa-truck icon"></i>Free delivery</li>
+				</ul>
+				<a href="books.html"><button class="explore-btn">Explore all books<i
+							class="fa-brands fa-wpexplorer icon-shop"></i></button></a>
+			</div>
+		</section>
+		<section id="explore-posters">
+			<div class="explore-poster-tab">
+				<span>Exclusive Posters</span>
+				<ul>
+					<li><i class="fa-solid fa-star icon"></i>Glossy and Matte paper</li>
+					<li><i class="fa-solid fa-print icon"></i>HD printing quality</li>
+					<li><i class="fa-solid fa-pen-fancy icon"></i>Exclusive Designs</li>
+				</ul>
+				<a href="poster.html"><button class="explore-btn">Shop now<i
+							class="fa-solid fa-cart-shopping icon-shop"></i></button></a>
+			</div>
+			<div class="main-poster-image"></div>
+		</section>
+		<section id="hot-collections">
+			<header>Hot Collections<i class="fa-solid fa-bolt" id="bolt"></i></header>
+			<div id="Collection-container">
+				<div>
+					<span class="image-container"><img src="images/Son_and_Kane.jpeg"></span>
+					<a href="poster.html"><span class="caption-container">Football Posters<i class="fa-solid fa-arrow-right"
+								id="books-icon"></i></span></a>
+				</div>
+				<div>
+					<span class="image-container"><img src="Magzines/1.jpg"></span>
+					<a href="poster.html"><span class="caption-container">Magzines<i class="fa-solid fa-arrow-right"
+								id="books-icon"></i></span></a>
+				</div>
+				<div>
+					<span class="image-container"><img
+							src="images/Cinco tramas que no incluyeron en Game of Thrones y que son cruciales en los libros.jpeg"></span>
+					<a href="books.html"><span class="caption-container">GOT<i class="fa-solid fa-arrow-right"
+								id="books-icon"></i></span></a>
+				</div>
+			</div>
+		</section>
+		<section id="subscribe">
+			<span id="sub-head">Subscribe to our emails</span>
+			<span id="sub-cap">
+				Be the first to know about new collections and exclusive offers.
+			</span>
+			<form>
+				<input type="email" name="email" placeholder="Email" id="email-tab">
+				<button type="submit" id="email-sub-btn"><i class="fa-solid fa-arrow-right"></i></button>
+			</form>
+		</section>
+	</main>
+	<footer>
+		<span id="dot-head"><i class="fa-solid fa-ellipsis"></i></span>
+		<div id="tabs-list">
+			<ul>
+				<li><a href="about us.html">About us</a></li>
+				<li><a href="privacy.html">Privacy Policy</a></li>
+				<li><a href="privacy.html">Refund Policy</a></li>
+				<li><a href="privacy.html">Payment</a></li>
+				<li><a href="tos.html">Terms of Service</a></li>
+			</ul>
+		</div>
+		<div id="social-icons">
+		<ul>
+			<li><a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram"></i></a></li>
+			<li><a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook"></i></a></li>
+			<li><a href="https://twitter.com/"><i class="fa-brands fa-square-x-twitter"></i></a></li>
+			<li><a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a></li>
+		</ul>
+		</div>
+	</footer>
+
+
+
+
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

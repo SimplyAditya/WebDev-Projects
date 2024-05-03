@@ -1,0 +1,402 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center; 
+    position: sticky;
+    /* top: 0px; */
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: red;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .account_icon{
+    width: 20px;
+  }
+
+ 
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+    display: flex;
+    font-family:'Baloo Bhaijaan 2', cursive;
+}
+/*
+font-family: 'Baloo Bhaijaan 2', cursive;
+font-family: 'Nunito', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Playball', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Vujahday Script', cursive;
+*/
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    margin-top: 5px;
+    padding: 0px 20px 0px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+/* 
+#navbar ul li a:hover{
+    color: white;
+    background-color: red;
+} */
+
+body{
+    background-color: black;
+}
+
+.navtop_text{
+    color: #FAF9F6	;
+    padding-left: 6rem;
+}
+
+.navbar_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.navtop{
+    padding: 1rem;
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navtop_text{
+    font-size: 35px;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+}
+
+.navbar{
+    padding-left: 7rem;
+
+}
+
+.fas{
+    color: #808080;
+    padding-right: 0.5rem;
+}
+
+.navtop{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.navicons{
+    width: 8vw;
+    justify-content: space-around;
+    display: flex;
+}
+
+.box_navbar{
+    font-size: 20px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 25px 1px 0px;
+}
+
+.box_navbar:hover .hover-text-nav{
+    border-bottom: 1px dotted white;
+}
+
+.hr_navbar{
+    opacity: 0.1;
+    margin-top: 20px;
+}
+
+.hr_navbar_2{
+    margin-top: 20px;
+    opacity: 0.1;
+}
+
+.box_navbar_text{
+    color: white;
+}
+
+.hero_section{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero_section_text{
+    width: 100vw;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 6rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* .hero_section_img{
+    width: 50vw;
+    object-fit: cover;
+} */
+
+.main_text{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10rem;
+}
+
+.main_text_text1{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+.Forg{
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .FHead{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1rem;
+    color: white;
+    font-size: 45px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+  }
+
+  .Ftext{
+    color: #ffe8e8;
+    font-size: 1.9 rem;
+    background-color: #333333;
+    font-family: 'Poppins', sans-serif;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+  }
+
+  .Fbutton{
+    padding-top: 20px;
+    color: white;
+  }
+
+  input[type=text], select {
+    width: 400px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #333333;
+    color: white;
+
+
+  }
+
+  input[type=submit] {
+    background-color: rgb(244, 244, 138);
+    color: black;
+    padding: 10px 10px;
+    
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width:130px;
+  }
+
+  .Fsubm{
+    padding-top: 1.5rem;
+  }
+
+  .Flast{
+    font-size: 1rem;
+    padding-top: 10px;
+    color: #FAF9F6;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .Flast:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color:rgb(244, 244, 138) ;
+  }
+
+  #subscribe{
+    text-align: center;
+    width: 100%;
+}
+#subscribe{
+    margin-bottom: 7%;
+    margin-top: 9%;
+}
+#subscribe span{
+    display: block;
+}
+#subscribe #sub-head{
+    color: white;
+    font-weight: 500;
+    font-size: 3.8rem;
+    margin-bottom: 20px;
+}
+#subscribe #sub-cap{
+    color: lightgrey;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+#subscribe form #email-tab{
+    background-color: darkgray;
+    padding: 15px;
+    border-top-left-radius: 0.8rem;
+    border-bottom-left-radius: 0.8rem;
+    width: 250px;
+    border: 1px solid darkgray;
+    color: white;
+}
+#subscribe form #email-tab::placeholder{
+    color: white;
+    font-size: 1rem;
+}
+#subscribe form #email-sub-btn{
+    background-color: darkgray;
+    padding: 15px;
+    border-top-right-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    border: 1px solid darkgray;
+    margin-left: -15px;
+    color: white;
+}
+#subscribe form input:focus{
+    outline: none;
+/*  border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;*/
+}
+#subscribe form button:focus{
+    outline: none;
+/*  border-top: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;*/
+}
+
+/*footer*/
+footer{
+    width: 100%;
+    background-image: linear-gradient(#414141,#000000);
+    text-align: center;
+}
+footer span{
+    display: block;
+    color: white;
+    font-size: 2.5rem;
+}
+#tabs-list ul{
+    margin-top: 15px;
+}
+#tabs-list ul li{
+    list-style: none;
+    display: inline-block;
+    color: lightgrey;
+    padding: 10px;
+    font-size: 1.2rem;
+    transition: color 1s;
+}
+#tabs-list ul li a{
+    color: white;
+    text-decoration: none;
+}
+#tabs-list ul li:hover{
+    border-bottom: 1px solid white;
+    color: white;
+}
+#social-icons ul{
+    margin-bottom: 40px;
+}
+#social-icons ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 20px;
+}
+#social-icons ul li a{
+    color: white;
+    font-size: 1.5rem;
+}
+#social-icons ul li a:hover{
+    box-shadow: 0px 0px 6px 4px white;
+    border-radius: 0.2rem;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: darkgray;
+    box-shadow: 0px 4px 8px 7px #535547;
+    min-width: 100px;
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  .dropdown-content p a{
+    color: black;
+    transition: color 1s;
+  }
+  .dropdown-content p a:hover{
+    color: red;
+    border-bottom: 1px dotted red;
+
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .account_icon{
+    width: 20px;
+  }
