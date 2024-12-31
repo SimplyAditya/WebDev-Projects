@@ -1,0 +1,94 @@
+ .requestDishModal-modal {
+    background-color: #F7F8FA;
+    margin-top: 5.5%;
+    border-radius: 16px;
+    padding: 82px;
+    padding-top: 65px;
+    width: 93%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+ .requestDishModal-modal-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+
+ .requestDishModal-form-group {
+    margin-bottom: 24px;
+}
+
+ .requestDishModal-form-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #474747;
+    font-size: 16px;
+}
+
+ .requestDishModal-form-input {
+    width: 100%;
+    padding: 12px 30px;
+    border: none;
+    background-color: #F2F2F2;
+    border-radius: 8px;
+    font-size: 12px;
+    color: #F2F2F2;
+}
+
+ .requestDishModal-form-input::placeholder {
+    color: #9E9E9E;
+}
+ .requestDishModal-button-group {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+.requestDishModal-btn {
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+ .requestDishModal-btn-cancel {
+    border: 2px solid #1AC073;
+    color: #1AC073;
+}
+
+ .requestDishModal-btn-submit {
+    background-color: #1AC073;
+    color: white;
+}
+
+
+ .rubik *{
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+  }
+
+@media (max-width: 480px) {
+    #requestDishModal .modal {
+        padding: 24px;
+        width: 95%;
+    }
+
+    #requestDishModal .modal-title {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+
+    #requestDishModal .button-group {
+        flex-direction: column;
+    }
+
+    #requestDishModal .btn {
+        width: 100%;
+    }
+}

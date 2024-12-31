@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JTGeats</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <link rel="stylesheet" href="./requestDishModal.css" />
+    <link rel="stylesheet" href="./emptyCart.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo-container">
+        <a href="/" class="logo-text">
+          <img src="./assets/JTGeats.png" alt="JTGeats" />
+        </a>
+      </div>
+
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="nav-icons">
+        <button class="icon-button">
+          <img src="./assets/Search.svg" alt="Search" class="search-icon" />
+        </button>
+        <button class="icon-button" id="emptyCartBtn">
+          <div class="cart-wrapper">
+            <img src="./assets/Cart.svg" alt="Cart" class="cart-icon" />
+            <span class="cart-dot"></span>
+          </div>
+        </button>
+      </div>
+    </nav>
+
+
+      <div class="empty-cart" id="emptyCartModalModal" style="z-index: 1002;">
+        <img
+          src="./assets/emptyCart.svg"
+          alt="Empty Cart Logo"
+          class="modal-cart-icon"
+        />
+        <h1 class="cart-title rubik">Cart is Empty</h1>
+        <p class="cart-subtitle rubik">Add some items to the cart to checkout</p>
+        <button type="button" class="modal-back-button rubik" id="closeEmptyCartModal">Back to Menu</button>
+      </div>
+
+
+
+    <div class="requestDishModal-modal" id="requestDishModal">
+        <h2 class="requestDishModal-modal-title rubik">Request a Dish</h2>
+        <form>
+          <div class="requestDishModal-form-group">
+            <label for="dishName" class="requestDishModal-form-label rubik">Name*</label>
+            <input 
+              type="text" 
+              id="dishName" 
+              class="requestDishModal-form-input" 
+              placeholder="Enter name of the dish"
+              required
+            >
+          </div>
+          <div class="requestDishModal-form-group">
+            <label for="imageUrl" class="requestDishModal-form-label rubik">Upload an image</label>
+            <input 
+              type="text" 
+              id="imageUrl" 
+              class="requestDishModal-form-input" 
+              placeholder="Paste a URL"
+            >
+          </div>
+          <div class="requestDishModal-button-group">
+            <button type="button" class="requestDishModal-btn requestDishModal-btn-cancel rubik" id="cancelModal">Cancel</button>
+            <button type="button" class="requestDishModal-btn requestDishModal-btn-submit rubik" id="submitModal">Submit Request</button>
+          </div>
+        </form>
+      </div>
+    <div id="modalOverlay"></div>
+    
+    
+
+    <section class="landing">
+      <div class="landing-content">
+        <div class="landing-text">
+          <h1>Authentic Home<br />food in India</h1>
+          <p>
+            JTGeats is a courier service in which authentic home<br />cook food
+            is delivered to a customer.
+          </p>
+          <div class="search-container">
+            <input
+              type="text"
+              placeholder="Search food you love"
+              class="search-input"
+            />
+            <button class="search-button">Search</button>
+          </div>
+        </div>
+        <div class="landing-image">
+          <img
+            src="./assets/cuate.svg"
+            alt="Chef Illustration"
+            class="chef-img"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="home-kitchen">
+      <h2>Home Kitchen</h2>
+      <div class="food-grid">
+        <div class="food-card">
+          <div class="discount">50%</div>
+          <img
+            src="https://s3-alpha-sig.figma.com/img/3f4b/d9f6/087c8944b1b24580544cd76fcfd54b5a?Expires=1736726400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Kr9~gRNcVDNO7hK09LGxqCVs8D2KBHyWwntKvFlr5uFXT594dDmHcMSff43VM5kWy-M-K5w8q-TxOLpdd5koQY6M1m3YoEK9uosk4EU2yKeLG1JAigGq9eSlg8sl1~J7ppNfIyEY~MtAGKUOkafrn4DCUWNkgcWEW1YaZfWYBWElSlTkqgI~qWwNsd-1XBRsPYBWIu1Vkdw6oj3FiyzPHdFOJZpN0423bCFk5MrYo8AEJ4ILHhpCnT8Sv9m8bM8IssxZb5LZGHONcd88bm7MmT2hya6MuFAfyvNPY9TsfqfdTepyyJbIiYAPK7iyOkHcEU5EeD1DhFYbDJ7TpWafLA__"
+            alt="Home made pizza"
+            class="food-image"
+          />
+          <div class="food-details">
+            <div class="food-title">
+                <h3>Home made pizza</h3>
+                <div class="price">₹190</div>
+            </div>
+            <div class="rating">
+              <span class="stars">★ 4.7</span>
+              <span class="time">50-79 min</span>
+            </div>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+        <div class="food-card">
+            <div class="discount">50%</div>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/3f4b/d9f6/087c8944b1b24580544cd76fcfd54b5a?Expires=1736726400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Kr9~gRNcVDNO7hK09LGxqCVs8D2KBHyWwntKvFlr5uFXT594dDmHcMSff43VM5kWy-M-K5w8q-TxOLpdd5koQY6M1m3YoEK9uosk4EU2yKeLG1JAigGq9eSlg8sl1~J7ppNfIyEY~MtAGKUOkafrn4DCUWNkgcWEW1YaZfWYBWElSlTkqgI~qWwNsd-1XBRsPYBWIu1Vkdw6oj3FiyzPHdFOJZpN0423bCFk5MrYo8AEJ4ILHhpCnT8Sv9m8bM8IssxZb5LZGHONcd88bm7MmT2hya6MuFAfyvNPY9TsfqfdTepyyJbIiYAPK7iyOkHcEU5EeD1DhFYbDJ7TpWafLA__"
+              alt="Home made pizza"
+              class="food-image"
+            />
+            <div class="food-details">
+              <div class="food-title">
+                  <h3>Home made pizza</h3>
+                  <div class="price">₹190</div>
+              </div>
+              <div class="rating">
+                <span class="stars">★ 4.7</span>
+                <span class="time">50-79 min</span>
+              </div>
+              <button class="add-btn">+</button>
+            </div>
+          </div>
+          <div class="food-card">
+            <div class="discount">50%</div>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/3f4b/d9f6/087c8944b1b24580544cd76fcfd54b5a?Expires=1736726400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Kr9~gRNcVDNO7hK09LGxqCVs8D2KBHyWwntKvFlr5uFXT594dDmHcMSff43VM5kWy-M-K5w8q-TxOLpdd5koQY6M1m3YoEK9uosk4EU2yKeLG1JAigGq9eSlg8sl1~J7ppNfIyEY~MtAGKUOkafrn4DCUWNkgcWEW1YaZfWYBWElSlTkqgI~qWwNsd-1XBRsPYBWIu1Vkdw6oj3FiyzPHdFOJZpN0423bCFk5MrYo8AEJ4ILHhpCnT8Sv9m8bM8IssxZb5LZGHONcd88bm7MmT2hya6MuFAfyvNPY9TsfqfdTepyyJbIiYAPK7iyOkHcEU5EeD1DhFYbDJ7TpWafLA__"
+              alt="Home made pizza"
+              class="food-image"
+            />
+            <div class="food-details">
+              <div class="food-title">
+                  <h3>Home made pizza</h3>
+                  <div class="price">₹190</div>
+              </div>
+              <div class="rating">
+                <span class="stars">★ 4.7</span>
+                <span class="time">50-79 min</span>
+              </div>
+              <button class="add-btn">+</button>
+            </div>
+          </div>
+          <div class="food-card">
+            <div class="discount">50%</div>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/3f4b/d9f6/087c8944b1b24580544cd76fcfd54b5a?Expires=1736726400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Kr9~gRNcVDNO7hK09LGxqCVs8D2KBHyWwntKvFlr5uFXT594dDmHcMSff43VM5kWy-M-K5w8q-TxOLpdd5koQY6M1m3YoEK9uosk4EU2yKeLG1JAigGq9eSlg8sl1~J7ppNfIyEY~MtAGKUOkafrn4DCUWNkgcWEW1YaZfWYBWElSlTkqgI~qWwNsd-1XBRsPYBWIu1Vkdw6oj3FiyzPHdFOJZpN0423bCFk5MrYo8AEJ4ILHhpCnT8Sv9m8bM8IssxZb5LZGHONcd88bm7MmT2hya6MuFAfyvNPY9TsfqfdTepyyJbIiYAPK7iyOkHcEU5EeD1DhFYbDJ7TpWafLA__"
+              alt="Home made pizza"
+              class="food-image"
+            />
+            <div class="food-details">
+              <div class="food-title">
+                  <h3>Home made pizza</h3>
+                  <div class="price">₹190</div>
+              </div>
+              <div class="rating">
+                <span class="stars">★ 4.7</span>
+                <span class="time">50-79 min</span>
+              </div>
+              <button class="add-btn">+</button>
+            </div>
+          </div>
+          <div class="food-card">
+            <div class="discount">50%</div>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/3f4b/d9f6/087c8944b1b24580544cd76fcfd54b5a?Expires=1736726400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Kr9~gRNcVDNO7hK09LGxqCVs8D2KBHyWwntKvFlr5uFXT594dDmHcMSff43VM5kWy-M-K5w8q-TxOLpdd5koQY6M1m3YoEK9uosk4EU2yKeLG1JAigGq9eSlg8sl1~J7ppNfIyEY~MtAGKUOkafrn4DCUWNkgcWEW1YaZfWYBWElSlTkqgI~qWwNsd-1XBRsPYBWIu1Vkdw6oj3FiyzPHdFOJZpN0423bCFk5MrYo8AEJ4ILHhpCnT8Sv9m8bM8IssxZb5LZGHONcd88bm7MmT2hya6MuFAfyvNPY9TsfqfdTepyyJbIiYAPK7iyOkHcEU5EeD1DhFYbDJ7TpWafLA__"
+              alt="Home made pizza"
+              class="food-image"
+            />
+            <div class="food-details">
+              <div class="food-title">
+                  <h3>Home made pizza</h3>
+                  <div class="price">₹190</div>
+              </div>
+              <div class="rating">
+                <span class="stars">★ 4.7</span>
+                <span class="time">50-79 min</span>
+              </div>
+              <button class="add-btn">+</button>
+            </div>
+          </div>
+          <div class="food-card">
+            <div class="discount">50%</div>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/3f4b/d9f6/087c8944b1b24580544cd76fcfd54b5a?Expires=1736726400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Kr9~gRNcVDNO7hK09LGxqCVs8D2KBHyWwntKvFlr5uFXT594dDmHcMSff43VM5kWy-M-K5w8q-TxOLpdd5koQY6M1m3YoEK9uosk4EU2yKeLG1JAigGq9eSlg8sl1~J7ppNfIyEY~MtAGKUOkafrn4DCUWNkgcWEW1YaZfWYBWElSlTkqgI~qWwNsd-1XBRsPYBWIu1Vkdw6oj3FiyzPHdFOJZpN0423bCFk5MrYo8AEJ4ILHhpCnT8Sv9m8bM8IssxZb5LZGHONcd88bm7MmT2hya6MuFAfyvNPY9TsfqfdTepyyJbIiYAPK7iyOkHcEU5EeD1DhFYbDJ7TpWafLA__"
+              alt="Home made pizza"
+              class="food-image"
+            />
+            <div class="food-details">
+              <div class="food-title">
+                  <h3>Home made pizza</h3>
+                  <div class="price">₹190</div>
+              </div>
+              <div class="rating">
+                <span class="stars">★ 4.7</span>
+                <span class="time">50-79 min</span>
+              </div>
+              <button class="add-btn">+</button>
+            </div>
+          </div>
+          <div class="food-card">
+            <div class="discount">50%</div>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/3f4b/d9f6/087c8944b1b24580544cd76fcfd54b5a?Expires=1736726400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Kr9~gRNcVDNO7hK09LGxqCVs8D2KBHyWwntKvFlr5uFXT594dDmHcMSff43VM5kWy-M-K5w8q-TxOLpdd5koQY6M1m3YoEK9uosk4EU2yKeLG1JAigGq9eSlg8sl1~J7ppNfIyEY~MtAGKUOkafrn4DCUWNkgcWEW1YaZfWYBWElSlTkqgI~qWwNsd-1XBRsPYBWIu1Vkdw6oj3FiyzPHdFOJZpN0423bCFk5MrYo8AEJ4ILHhpCnT8Sv9m8bM8IssxZb5LZGHONcd88bm7MmT2hya6MuFAfyvNPY9TsfqfdTepyyJbIiYAPK7iyOkHcEU5EeD1DhFYbDJ7TpWafLA__"
+              alt="Home made pizza"
+              class="food-image"
+            />
+            <div class="food-details">
+              <div class="food-title">
+                  <h3>Home made pizza</h3>
+                  <div class="price">₹190</div>
+              </div>
+              <div class="rating">
+                <span class="stars">★ 4.7</span>
+                <span class="time">50-79 min</span>
+              </div>
+              <button class="add-btn">+</button>
+            </div>
+          </div>
+          <div class="food-card">
+            <div class="discount">50%</div>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/3f4b/d9f6/087c8944b1b24580544cd76fcfd54b5a?Expires=1736726400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Kr9~gRNcVDNO7hK09LGxqCVs8D2KBHyWwntKvFlr5uFXT594dDmHcMSff43VM5kWy-M-K5w8q-TxOLpdd5koQY6M1m3YoEK9uosk4EU2yKeLG1JAigGq9eSlg8sl1~J7ppNfIyEY~MtAGKUOkafrn4DCUWNkgcWEW1YaZfWYBWElSlTkqgI~qWwNsd-1XBRsPYBWIu1Vkdw6oj3FiyzPHdFOJZpN0423bCFk5MrYo8AEJ4ILHhpCnT8Sv9m8bM8IssxZb5LZGHONcd88bm7MmT2hya6MuFAfyvNPY9TsfqfdTepyyJbIiYAPK7iyOkHcEU5EeD1DhFYbDJ7TpWafLA__"
+              alt="Home made pizza"
+              class="food-image"
+            />
+            <div class="food-details">
+              <div class="food-title">
+                  <h3>Home made pizza</h3>
+                  <div class="price">₹190</div>
+              </div>
+              <div class="rating">
+                <span class="stars">★ 4.7</span>
+                <span class="time">50-79 min</span>
+              </div>
+              <button class="add-btn">+</button>
+            </div>
+          </div>
+          <div class="food-card">
+            <div class="discount">50%</div>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/3f4b/d9f6/087c8944b1b24580544cd76fcfd54b5a?Expires=1736726400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Kr9~gRNcVDNO7hK09LGxqCVs8D2KBHyWwntKvFlr5uFXT594dDmHcMSff43VM5kWy-M-K5w8q-TxOLpdd5koQY6M1m3YoEK9uosk4EU2yKeLG1JAigGq9eSlg8sl1~J7ppNfIyEY~MtAGKUOkafrn4DCUWNkgcWEW1YaZfWYBWElSlTkqgI~qWwNsd-1XBRsPYBWIu1Vkdw6oj3FiyzPHdFOJZpN0423bCFk5MrYo8AEJ4ILHhpCnT8Sv9m8bM8IssxZb5LZGHONcd88bm7MmT2hya6MuFAfyvNPY9TsfqfdTepyyJbIiYAPK7iyOkHcEU5EeD1DhFYbDJ7TpWafLA__"
+              alt="Home made pizza"
+              class="food-image"
+            />
+            <div class="food-details">
+              <div class="food-title">
+                  <h3>Home made pizza</h3>
+                  <div class="price">₹190</div>
+              </div>
+              <div class="rating">
+                <span class="stars">★ 4.7</span>
+                <span class="time">50-79 min</span>
+              </div>
+              <button class="add-btn">+</button>
+            </div>
+          </div>
+          <div class="food-card">
+            <div class="discount">50%</div>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/3f4b/d9f6/087c8944b1b24580544cd76fcfd54b5a?Expires=1736726400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Kr9~gRNcVDNO7hK09LGxqCVs8D2KBHyWwntKvFlr5uFXT594dDmHcMSff43VM5kWy-M-K5w8q-TxOLpdd5koQY6M1m3YoEK9uosk4EU2yKeLG1JAigGq9eSlg8sl1~J7ppNfIyEY~MtAGKUOkafrn4DCUWNkgcWEW1YaZfWYBWElSlTkqgI~qWwNsd-1XBRsPYBWIu1Vkdw6oj3FiyzPHdFOJZpN0423bCFk5MrYo8AEJ4ILHhpCnT8Sv9m8bM8IssxZb5LZGHONcd88bm7MmT2hya6MuFAfyvNPY9TsfqfdTepyyJbIiYAPK7iyOkHcEU5EeD1DhFYbDJ7TpWafLA__"
+              alt="Home made pizza"
+              class="food-image"
+            />
+            <div class="food-details">
+              <div class="food-title">
+                  <h3>Home made pizza</h3>
+                  <div class="price">₹190</div>
+              </div>
+              <div class="rating">
+                <span class="stars">★ 4.7</span>
+                <span class="time">50-79 min</span>
+              </div>
+              <button class="add-btn">+</button>
+            </div>
+          </div>
+          <div class="food-card">
+            <div class="discount">50%</div>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/3f4b/d9f6/087c8944b1b24580544cd76fcfd54b5a?Expires=1736726400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Kr9~gRNcVDNO7hK09LGxqCVs8D2KBHyWwntKvFlr5uFXT594dDmHcMSff43VM5kWy-M-K5w8q-TxOLpdd5koQY6M1m3YoEK9uosk4EU2yKeLG1JAigGq9eSlg8sl1~J7ppNfIyEY~MtAGKUOkafrn4DCUWNkgcWEW1YaZfWYBWElSlTkqgI~qWwNsd-1XBRsPYBWIu1Vkdw6oj3FiyzPHdFOJZpN0423bCFk5MrYo8AEJ4ILHhpCnT8Sv9m8bM8IssxZb5LZGHONcd88bm7MmT2hya6MuFAfyvNPY9TsfqfdTepyyJbIiYAPK7iyOkHcEU5EeD1DhFYbDJ7TpWafLA__"
+              alt="Home made pizza"
+              class="food-image"
+            />
+            <div class="food-details">
+              <div class="food-title">
+                  <h3>Home made pizza</h3>
+                  <div class="price">₹190</div>
+              </div>
+              <div class="rating">
+                <span class="stars">★ 4.7</span>
+                <span class="time">50-79 min</span>
+              </div>
+              <button class="add-btn">+</button>
+            </div>
+          </div>
+          <div class="food-card">
+            <div class="discount">50%</div>
+            <img
+              src="https://s3-alpha-sig.figma.com/img/3f4b/d9f6/087c8944b1b24580544cd76fcfd54b5a?Expires=1736726400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Kr9~gRNcVDNO7hK09LGxqCVs8D2KBHyWwntKvFlr5uFXT594dDmHcMSff43VM5kWy-M-K5w8q-TxOLpdd5koQY6M1m3YoEK9uosk4EU2yKeLG1JAigGq9eSlg8sl1~J7ppNfIyEY~MtAGKUOkafrn4DCUWNkgcWEW1YaZfWYBWElSlTkqgI~qWwNsd-1XBRsPYBWIu1Vkdw6oj3FiyzPHdFOJZpN0423bCFk5MrYo8AEJ4ILHhpCnT8Sv9m8bM8IssxZb5LZGHONcd88bm7MmT2hya6MuFAfyvNPY9TsfqfdTepyyJbIiYAPK7iyOkHcEU5EeD1DhFYbDJ7TpWafLA__"
+              alt="Home made pizza"
+              class="food-image"
+            />
+            <div class="food-details">
+              <div class="food-title">
+                  <h3>Home made pizza</h3>
+                  <div class="price">₹190</div>
+              </div>
+              <div class="rating">
+                <span class="stars">★ 4.7</span>
+                <span class="time">50-79 min</span>
+              </div>
+              <button class="add-btn">+</button>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="popular-items">
+      <h2 class="popular-items">Popular Items</h2>
+      <div class="carousel">
+        <div class="carousel-item">
+            <div class="food-card">
+                <div class="discount">50%</div>
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/3f4b/d9f6/087c8944b1b24580544cd76fcfd54b5a?Expires=1736726400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Kr9~gRNcVDNO7hK09LGxqCVs8D2KBHyWwntKvFlr5uFXT594dDmHcMSff43VM5kWy-M-K5w8q-TxOLpdd5koQY6M1m3YoEK9uosk4EU2yKeLG1JAigGq9eSlg8sl1~J7ppNfIyEY~MtAGKUOkafrn4DCUWNkgcWEW1YaZfWYBWElSlTkqgI~qWwNsd-1XBRsPYBWIu1Vkdw6oj3FiyzPHdFOJZpN0423bCFk5MrYo8AEJ4ILHhpCnT8Sv9m8bM8IssxZb5LZGHONcd88bm7MmT2hya6MuFAfyvNPY9TsfqfdTepyyJbIiYAPK7iyOkHcEU5EeD1DhFYbDJ7TpWafLA__"
+                  alt="Home made pizza"
+                  class="food-image"
+                />
+                <div class="food-details">
+                  <div class="food-title">
+                      <h3>Home made pizza</h3>
+                      <div class="price">₹190</div>
+                  </div>
+                  <div class="rating">
+                    <span class="stars">★ 4.7</span>
+                    <span class="time">50-79 min</span>
+                  </div>
+                  <button class="add-btn">+</button>
+                </div>
+              </div>
+        </div>
+        <div class="carousel-item">
+            <div class="food-card">
+                <div class="discount">50%</div>
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/3f4b/d9f6/087c8944b1b24580544cd76fcfd54b5a?Expires=1736726400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Kr9~gRNcVDNO7hK09LGxqCVs8D2KBHyWwntKvFlr5uFXT594dDmHcMSff43VM5kWy-M-K5w8q-TxOLpdd5koQY6M1m3YoEK9uosk4EU2yKeLG1JAigGq9eSlg8sl1~J7ppNfIyEY~MtAGKUOkafrn4DCUWNkgcWEW1YaZfWYBWElSlTkqgI~qWwNsd-1XBRsPYBWIu1Vkdw6oj3FiyzPHdFOJZpN0423bCFk5MrYo8AEJ4ILHhpCnT8Sv9m8bM8IssxZb5LZGHONcd88bm7MmT2hya6MuFAfyvNPY9TsfqfdTepyyJbIiYAPK7iyOkHcEU5EeD1DhFYbDJ7TpWafLA__"
+                  alt="Home made pizza"
+                  class="food-image"
+                />
+                <div class="food-details">
+                  <div class="food-title">
+                      <h3>Home made pizza</h3>
+                      <div class="price">₹190</div>
+                  </div>
+                  <div class="rating">
+                    <span class="stars">★ 4.7</span>
+                    <span class="time">50-79 min</span>
+                  </div>
+                  <button class="add-btn">+</button>
+                </div>
+              </div>
+        </div>
+        <div class="carousel-item">
+            <div class="food-card">
+                <div class="discount">50%</div>
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/3f4b/d9f6/087c8944b1b24580544cd76fcfd54b5a?Expires=1736726400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Kr9~gRNcVDNO7hK09LGxqCVs8D2KBHyWwntKvFlr5uFXT594dDmHcMSff43VM5kWy-M-K5w8q-TxOLpdd5koQY6M1m3YoEK9uosk4EU2yKeLG1JAigGq9eSlg8sl1~J7ppNfIyEY~MtAGKUOkafrn4DCUWNkgcWEW1YaZfWYBWElSlTkqgI~qWwNsd-1XBRsPYBWIu1Vkdw6oj3FiyzPHdFOJZpN0423bCFk5MrYo8AEJ4ILHhpCnT8Sv9m8bM8IssxZb5LZGHONcd88bm7MmT2hya6MuFAfyvNPY9TsfqfdTepyyJbIiYAPK7iyOkHcEU5EeD1DhFYbDJ7TpWafLA__"
+                  alt="Home made pizza"
+                  class="food-image"
+                />
+                <div class="food-details">
+                  <div class="food-title">
+                      <h3>Home made pizza</h3>
+                      <div class="price">₹190</div>
+                  </div>
+                  <div class="rating">
+                    <span class="stars">★ 4.7</span>
+                    <span class="time">50-79 min</span>
+                  </div>
+                  <button class="add-btn">+</button>
+                </div>
+              </div>
+        </div>
+        <div class="carousel-item">
+            <div class="food-card">
+                <div class="discount">50%</div>
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/3f4b/d9f6/087c8944b1b24580544cd76fcfd54b5a?Expires=1736726400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Kr9~gRNcVDNO7hK09LGxqCVs8D2KBHyWwntKvFlr5uFXT594dDmHcMSff43VM5kWy-M-K5w8q-TxOLpdd5koQY6M1m3YoEK9uosk4EU2yKeLG1JAigGq9eSlg8sl1~J7ppNfIyEY~MtAGKUOkafrn4DCUWNkgcWEW1YaZfWYBWElSlTkqgI~qWwNsd-1XBRsPYBWIu1Vkdw6oj3FiyzPHdFOJZpN0423bCFk5MrYo8AEJ4ILHhpCnT8Sv9m8bM8IssxZb5LZGHONcd88bm7MmT2hya6MuFAfyvNPY9TsfqfdTepyyJbIiYAPK7iyOkHcEU5EeD1DhFYbDJ7TpWafLA__"
+                  alt="Home made pizza"
+                  class="food-image"
+                />
+                <div class="food-details">
+                  <div class="food-title">
+                      <h3>Home made pizza</h3>
+                      <div class="price">₹190</div>
+                  </div>
+                  <div class="rating">
+                    <span class="stars">★ 4.7</span>
+                    <span class="time">50-79 min</span>
+                  </div>
+                  <button class="add-btn">+</button>
+                </div>
+              </div>
+        </div>
+        <div class="carousel-item">
+            <div class="food-card">
+                <div class="discount">50%</div>
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/3f4b/d9f6/087c8944b1b24580544cd76fcfd54b5a?Expires=1736726400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Kr9~gRNcVDNO7hK09LGxqCVs8D2KBHyWwntKvFlr5uFXT594dDmHcMSff43VM5kWy-M-K5w8q-TxOLpdd5koQY6M1m3YoEK9uosk4EU2yKeLG1JAigGq9eSlg8sl1~J7ppNfIyEY~MtAGKUOkafrn4DCUWNkgcWEW1YaZfWYBWElSlTkqgI~qWwNsd-1XBRsPYBWIu1Vkdw6oj3FiyzPHdFOJZpN0423bCFk5MrYo8AEJ4ILHhpCnT8Sv9m8bM8IssxZb5LZGHONcd88bm7MmT2hya6MuFAfyvNPY9TsfqfdTepyyJbIiYAPK7iyOkHcEU5EeD1DhFYbDJ7TpWafLA__"
+                  alt="Home made pizza"
+                  class="food-image"
+                />
+                <div class="food-details">
+                  <div class="food-title">
+                      <h3>Home made pizza</h3>
+                      <div class="price">₹190</div>
+                  </div>
+                  <div class="rating">
+                    <span class="stars">★ 4.7</span>
+                    <span class="time">50-79 min</span>
+                  </div>
+                  <button class="add-btn">+</button>
+                </div>
+              </div>
+        </div>
+      </div>
+      <button class="request-dish">Request a Dish</button>
+    </section>
+
+    <section class="food-service">
+      <div class="content-wrapper">
+        <h2>We are providing best<br />home cooked food delivery service.</h2>
+        <p class="subtext">
+          Away from home and craving the tasty homemade recipes?<br />
+          Choose from a selection of our delicious home cooked dishes
+        </p>
+        <div class="video-container">
+          <div class="video-wrapper">
+            <video class="custom-video">
+              <source src="./assets/sample.mp4" type="video/mp4" />
+            </video>
+            <button class="play-button">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M8 5v14l11-7z" fill="white" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="background-gradient"></div>
+    </section>
+    <section class="contact-section">
+      <div class="contact-container">
+        <div class="contact-content">
+          <div class="contact-form">
+            <h2>Do you have a question<br />or want to become a seller?</h2>
+            <p class="contact-subtitle">
+              Fill this form and our manager will contact you next 48 hours.
+            </p>
+            <form>
+              <div class="form-group">
+                <input type="text" placeholder="Your Name" class="form-input" />
+                <input
+                  type="email"
+                  placeholder="Your e-mail"
+                  class="form-input"
+                />
+              </div>
+              <textarea
+                placeholder="Your message"
+                class="form-input message-input"
+              ></textarea>
+              <button type="submit" class="submit-btn">Submit</button>
+            </form>
+          </div>
+          <div class="contact-image">
+            <img
+              src="./assets/Food_delivery_cute_man.svg"
+              alt="Delivery Illustration"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="logo">
+          <a href="/"><img src="./assets/JTGeats.png" alt="JTGeats" /> </a>
+        </div>
+
+        <nav class="nav-menu">
+          <a href="#" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#menu" class="nav-link">Menu</a>
+          <a href="#blog" class="nav-link">Blog</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="social-links">
+          <a href="#" class="social-link">
+            <img src="./assets/facebook.svg" alt="Facebook" />
+          </a>
+          <a href="#" class="social-link">
+            <img src="./assets/Card.png" alt="Instagram" />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
